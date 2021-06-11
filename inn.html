@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<script>
+			let inn1 = '3463463460';
+			let inn2 = '2063463479';
+
+			inn1 = inn1.toString().split('');
+			inn2 = inn2.toString().split('')
+
+			let gender = function(x){
+				if (x[8]%2 == 0){
+					return 'Женский';
+				} 
+				else{
+					return 'Мужской';
+				}
+			}
+
+			let original = function(x){
+				if (x[9] == ((2*x[0]+4*x[1]+10*x[2]+3*x[3]+5*x[4]+9*x[5]+4*x[6]+6*x[7]+8*x[8])%11)%10){
+					return "Подлинный";
+				}
+				else{
+					return "Фальшивий";
+				}
+			}
+		
+			document.write(`${inn1.join('')} - ИНН физического лица, Пол: ${gender(inn1)}, Подлинность: ${original(inn1)}<br/>`)
+			document.write(`${inn2.join('')} - ИНН физического лица, Пол: ${gender(inn2)}, Подлинность: ${original(inn2)}`)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
