@@ -19,14 +19,15 @@
 			}
 
 			let original = function(x){
-				if (x[9] == ((2*x[0]+4*x[1]+10*x[2]+3*x[3]+5*x[4]+9*x[5]+4*x[6]+6*x[7]+8*x[8])%11)%10){
+				if (x[9] == ((-1*x[0]+5*x[1]+7*x[2]+9*x[3]+4*x[4]+6*x[5]+10*x[6]+5*x[7]+7*x[8])%11)%10){
 					return "Подлинный";
 				}
 				else{
 					return "Фальшивий";
 				}
 			}
-		
+			x = inn1;
+			console.log(2*x[0]+4*x[1]+10*x[2]+3*x[3]+5*x[4]+9*x[5]+4*x[6]+6*x[7]+8*x[8])
 			document.write(`${inn1.join('')} - ИНН физического лица, Пол: ${gender(inn1)}, Подлинность: ${original(inn1)}<br/>`)
 			document.write(`${inn2.join('')} - ИНН физического лица, Пол: ${gender(inn2)}, Подлинность: ${original(inn2)}`)
 		</script>
